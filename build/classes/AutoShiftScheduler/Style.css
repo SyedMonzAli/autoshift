@@ -1,0 +1,41 @@
+/**
+ * Undergraduate final year individual computing project - KV6003 
+ * Northumbria University - 2019/20
+ * 
+ * @author Syed Ali - w17023496
+ *
+ * CSS Javafx style sheet
+ */
+
+.root{
+    -fx-background-image: url("bacground4neo.jpg");
+    -fx-background-color:transparent;
+    -fx-background-size: cover;  
+}
+
+.gridPane{   
+    -fx-background-color:transparent;
+}
+
+.scrollPane{
+    -fx-effect: dropshadow(one-pass-box , #000000, 20, 0.0, 0, 0);
+    -fx-background-color:transparent;
+}
+
+.button{
+    -fx-background-radius: 7;
+    -fx-font-family: "Arial";
+    -fx-background-color: #ECEFF1;
+}
+
+.gridPane .button:hover{   
+    -fx-effect: dropshadow(one-pass-box , #000000, 20, 0.0, 0, 0); 
+}
+
+.button:hover{ 
+   -fx-effect: dropshadow(one-pass-box , white, 20, 0.0, 0, 0); 
+}
+
+.scrollPane .label:hover{
+    -fx-effect: dropshadow(one-pass-box , #B0BEC5, 15, 0.5, 0, 0);
+}

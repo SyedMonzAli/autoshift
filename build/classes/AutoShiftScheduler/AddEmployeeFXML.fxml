@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" opacity="0.96" prefHeight="516.0" prefWidth="485.0" styleClass="root" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AutoShiftScheduler.AddEmployeeFXMLController">
+   <children>
+      <Label fx:id="addEmployeeTitleLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="51.0" prefHeight="53.0" prefWidth="420.0" text="Add Employee" textAlignment="CENTER" textFill="#f1fff1">
+         <font>
+            <Font name="Arial Bold Italic" size="36.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <TextField fx:id="nameTextField" alignment="CENTER" layoutX="197.0" layoutY="71.0" prefHeight="25.0" prefWidth="202.0">
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <Label alignment="CENTER_RIGHT" layoutX="131.0" layoutY="71.0" prefHeight="25.0" prefWidth="56.0" text="Name:" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="67.0" layoutY="106.0" prefHeight="25.0" prefWidth="155.0" text="Contract start date:" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <DatePicker fx:id="contractStartDatePicker" layoutX="236.0" layoutY="106.0" prefHeight="25.0" prefWidth="163.0">
+         <effect>
+            <DropShadow />
+         </effect></DatePicker>
+      <TextField fx:id="contractedHoursTextField" alignment="CENTER" layoutX="342.0" layoutY="182.0" prefHeight="25.0" prefWidth="56.0">
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="117.0" layoutY="182.0" prefHeight="25.0" prefWidth="211.0" text="Contracted hours per week:" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="77.0" layoutY="144.0" prefHeight="25.0" prefWidth="145.0" text="Contract end date:" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <DatePicker fx:id="contractEndDatePicker" layoutX="236.0" layoutY="144.0" prefHeight="25.0" prefWidth="163.0">
+         <effect>
+            <DropShadow />
+         </effect></DatePicker>
+      <TextField fx:id="hourlyRateTextField" alignment="CENTER" layoutX="342.0" layoutY="218.0" prefHeight="25.0" prefWidth="56.0">
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <Label alignment="CENTER_RIGHT" contentDisplay="CENTER" layoutX="207.0" layoutY="218.0" prefHeight="25.0" prefWidth="123.0" text="Hourly Rate:" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <TextField fx:id="minHoursTextField" alignment="CENTER" layoutX="342.0" layoutY="257.0" prefHeight="25.0" prefWidth="56.0">
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <Label alignment="CENTER_RIGHT" layoutX="83.0" layoutY="257.0" prefHeight="25.0" prefWidth="249.0" text="Minimum hours between shifts:" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <TextField fx:id="maxWorkDaysTextField" alignment="CENTER" layoutX="342.0" layoutY="293.0" prefHeight="25.0" prefWidth="56.0">
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <Label alignment="CENTER_RIGHT" layoutX="60.0" layoutY="293.0" prefHeight="25.0" prefWidth="275.0" text="Maximum consective working days:" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="46.0" layoutY="329.0" prefHeight="25.0" prefWidth="218.0" text="Primary preferred day off:" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="41.0" layoutY="364.0" prefHeight="25.0" prefWidth="229.0" text="Secondary preferred day off:" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Button fx:id="createNewEmployeeButton" contentDisplay="CENTER" layoutX="252.0" layoutY="414.0" mnemonicParsing="false" onAction="#createEmployee" prefHeight="37.0" prefWidth="179.0" text="+Create new employee" textFill="#5a5a5a" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="cancelButton" layoutX="51.0" layoutY="414.0" mnemonicParsing="false" onAction="#cancelButton" prefHeight="37.0" prefWidth="179.0" text="Cancel" textFill="#5a5a5a">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <ComboBox fx:id="preferredDayCombo1" layoutX="279.0" layoutY="329.0" onAction="#setComboBox1" prefHeight="25.0" prefWidth="123.0" promptText="Select">
+         <effect>
+            <DropShadow />
+         </effect></ComboBox>
+      <ComboBox fx:id="preferredDayCombo2" layoutX="279.0" layoutY="364.0" onAction="#setComboBox2" prefHeight="25.0" prefWidth="123.0" promptText="Select">
+         <effect>
+            <DropShadow />
+         </effect></ComboBox>
+      <Button fx:id="removeEmployeeButton" layoutX="252.0" layoutY="465.0" mnemonicParsing="false" onAction="#removeEmployee" prefHeight="37.0" prefWidth="179.0" text="Remove Employee" textFill="#5a5a5a">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+   </children>
+</AnchorPane>
