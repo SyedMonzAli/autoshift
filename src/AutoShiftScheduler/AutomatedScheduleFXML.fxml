@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" opacity="0.96" prefHeight="881.0" prefWidth="600.0" styleClass="root" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AutoShiftScheduler.AutomatedScheduleFXMLController">
+   <children>
+      <Label alignment="CENTER" layoutX="65.0" prefHeight="53.0" prefWidth="477.0" text="Create Shifts Automatically" textAlignment="CENTER" textFill="#f1fff1">
+         <font>
+            <Font name="Arial Bold Italic" size="36.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <DatePicker fx:id="scheduleFromDate" layoutX="229.0" layoutY="110.0" onAction="#checkFromAndToDate" prefHeight="25.0" prefWidth="151.0">
+         <effect>
+            <DropShadow />
+         </effect></DatePicker>
+      <DatePicker fx:id="scheduleToDate" layoutX="229.0" layoutY="146.0" onAction="#checkFromAndToDate" prefHeight="25.0" prefWidth="151.0">
+         <effect>
+            <DropShadow />
+         </effect></DatePicker>
+      <Label alignment="CENTER_RIGHT" layoutX="45.0" layoutY="110.0" prefHeight="25.0" prefWidth="171.0" text="Schedule period start:" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label alignment="CENTER_RIGHT" layoutX="45.0" layoutY="146.0" prefHeight="25.0" prefWidth="171.0" text="Schedule period end:" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label alignment="CENTER" layoutX="196.0" layoutY="612.0" prefHeight="35.0" prefWidth="202.0" text="Optional Settings" textAlignment="CENTER" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="20.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Button fx:id="autoShiftCancelButton" layoutX="157.0" layoutY="830.0" mnemonicParsing="false" onAction="#cancelButton" prefHeight="35.0" prefWidth="134.0" text="Cancel" textFill="#5d5d5d">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="allocateShiftsButton" layoutX="298.0" layoutY="830.0" mnemonicParsing="false" onAction="#automatedShifts6" prefHeight="35.0" prefWidth="151.0" text="Allocate Shifts" textFill="#5d5d5d">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Text fill="#f1fff1" fontSmoothingType="LCD" layoutX="40.0" layoutY="83.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Select desired shift settings, employees and any optional settings" textAlignment="CENTER" wrappingWidth="503.0">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Text>
+      <ComboBox fx:id="shiftTypeComboBox" layoutX="229.0" layoutY="182.0" onAction="#updateShiftType" prefHeight="25.0" prefWidth="151.0" promptText="Select">
+         <effect>
+            <DropShadow />
+         </effect></ComboBox>
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="67.0" layoutY="182.0" prefHeight="25.0" prefWidth="151.0" text="Shift Type:" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="119.0" layoutY="259.0" prefHeight="25.0" prefWidth="99.0" text="Start Time:" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="98.0" layoutY="297.0" prefHeight="25.0" prefWidth="120.0" text="Finish Time:" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <ComboBox fx:id="shiftPatternComboBox" layoutX="229.0" layoutY="217.0" onAction="#updatePatternHours" prefHeight="25.0" prefWidth="151.0" promptText="Select">
+         <effect>
+            <DropShadow />
+         </effect></ComboBox>
+      <Label alignment="CENTER_RIGHT" contentDisplay="RIGHT" layoutX="108.0" layoutY="217.0" prefHeight="25.0" prefWidth="113.0" text="Shift Pattern:" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <ComboBox fx:id="startTimeHours" layoutX="229.0" layoutY="259.0" onAction="#updateShiftType" prefHeight="25.0" prefWidth="72.0" promptText="HH">
+         <effect>
+            <DropShadow />
+         </effect></ComboBox>
+      <ComboBox fx:id="startTimeMinutes" layoutX="311.0" layoutY="259.0" onAction="#updateShiftType" prefHeight="25.0" prefWidth="72.0" promptText="MM">
+         <effect>
+            <DropShadow />
+         </effect></ComboBox>
+      <ComboBox fx:id="finishTimeHours" layoutX="229.0" layoutY="297.0" onAction="#updateShiftType" prefHeight="25.0" prefWidth="72.0" promptText="HH">
+         <effect>
+            <DropShadow />
+         </effect></ComboBox>
+      <ComboBox fx:id="finishTimeMinutes" layoutX="311.0" layoutY="297.0" onAction="#updateShiftType" prefHeight="25.0" prefWidth="72.0" promptText="MM">
+         <effect>
+            <DropShadow />
+         </effect></ComboBox>
+      <TableView fx:id="selectedEmployeesTable" layoutX="377.0" layoutY="404.0" opacity="0.84" prefHeight="200.0" prefWidth="171.0">
+        <columns>
+          <TableColumn fx:id="selectedID" prefWidth="39.0" style="-fx-font-size: 14;" text="ID" />
+          <TableColumn fx:id="selectedName" prefWidth="131.0" style="-fx-font-size: 14;" text="Name" />
+        </columns>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TableView>
+      <TableView fx:id="availableEmployeesTable" layoutX="57.0" layoutY="404.0" opacity="0.84" prefHeight="200.0" prefWidth="171.0">
+        <columns>
+          <TableColumn fx:id="availableID" prefWidth="41.0" style="-fx-font-size: 14;" text="ID" />
+          <TableColumn fx:id="availableName" prefWidth="129.0" style="-fx-font-size: 14;" text="Name" />
+        </columns>
+         <effect>
+            <DropShadow />
+         </effect>
+      </TableView>
+      <Label alignment="CENTER" layoutX="400.0" layoutY="385.0" prefHeight="19.0" prefWidth="127.0" text="Selected Employees" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Label>
+      <Label alignment="CENTER" layoutX="79.0" layoutY="385.0" prefHeight="19.0" prefWidth="127.0" text="Available Employees" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="13.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Label>
+      <Button fx:id="selectButton" layoutX="261.0" layoutY="422.0" mnemonicParsing="false" onAction="#selectedEmployee" prefHeight="25.0" prefWidth="85.0" text="Select&gt;&gt;" textFill="#5d5d5d">
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <Button fx:id="removeButton" layoutX="261.0" layoutY="455.0" mnemonicParsing="false" onAction="#removeEmployee" prefHeight="25.0" prefWidth="85.0" text="&lt;&lt;Remove" textFill="#5d5d5d">
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="156.0" layoutY="347.0" prefHeight="25.0" prefWidth="290.0" text="Select employees for automatic shifts" textAlignment="CENTER" textFill="#f1fff1" wrapText="true">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Label>
+      <Button fx:id="selectAllButton" alignment="CENTER" contentDisplay="CENTER" layoutX="254.0" layoutY="517.0" mnemonicParsing="false" onAction="#selectAllEmployees" prefHeight="25.0" prefWidth="99.0" text="Select All&gt;&gt;" textAlignment="CENTER" textFill="#5d5d5d">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="removeAllButton" alignment="CENTER" contentDisplay="CENTER" layoutX="255.0" layoutY="551.0" mnemonicParsing="false" onAction="#removeAllEmployees" prefHeight="25.0" prefWidth="99.0" text="&lt;&lt;Remove All" textAlignment="CENTER" textFill="#5d5d5d">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Label alignment="CENTER" layoutX="132.0" layoutY="647.0" prefHeight="25.0" prefWidth="331.0" text="Specify ideal number of employees on a day/days" textAlignment="CENTER" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <CheckBox fx:id="allDaysTick" layoutX="260.0" layoutY="678.0" mnemonicParsing="false" onAction="#setAllDaysTickBoxes" text="All Days" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></CheckBox>
+      <CheckBox fx:id="monTick" layoutX="35.0" layoutY="741.0" mnemonicParsing="false" onAction="#handleDayTickBoxes" prefHeight="20.0" prefWidth="64.0" text="Mon" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></CheckBox>
+      <CheckBox fx:id="tueTick" layoutX="115.0" layoutY="743.0" mnemonicParsing="false" onAction="#handleDayTickBoxes" prefHeight="20.0" prefWidth="64.0" text="Tue" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></CheckBox>
+      <CheckBox fx:id="wedTick" layoutX="192.0" layoutY="742.0" mnemonicParsing="false" onAction="#handleDayTickBoxes" prefHeight="20.0" prefWidth="64.0" text="Wed" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></CheckBox>
+      <CheckBox fx:id="thuTick" layoutX="269.0" layoutY="742.0" mnemonicParsing="false" onAction="#handleDayTickBoxes" prefHeight="20.0" prefWidth="64.0" text="Thu" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></CheckBox>
+      <CheckBox fx:id="friTick" layoutX="342.0" layoutY="744.0" mnemonicParsing="false" onAction="#handleDayTickBoxes" prefHeight="20.0" prefWidth="64.0" text="Fri" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></CheckBox>
+      <CheckBox fx:id="satTick" layoutX="412.0" layoutY="744.0" mnemonicParsing="false" onAction="#handleDayTickBoxes" prefHeight="20.0" prefWidth="64.0" text="Sat" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></CheckBox>
+      <CheckBox fx:id="sunTick" layoutX="484.0" layoutY="743.0" mnemonicParsing="false" onAction="#handleDayTickBoxes" prefHeight="20.0" prefWidth="64.0" text="Sun" textFill="#f1fff1">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></CheckBox>
+      <TextField fx:id="allDays" alignment="CENTER" disable="true" layoutX="266.0" layoutY="704.0" prefHeight="30.0" prefWidth="72.0" promptText="E.g. 10">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <TextField fx:id="mon" alignment="CENTER" disable="true" layoutX="36.0" layoutY="768.0" prefHeight="30.0" prefWidth="64.0" promptText="E.g. 10">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <TextField fx:id="tue" alignment="CENTER" disable="true" layoutX="115.0" layoutY="768.0" prefHeight="30.0" prefWidth="64.0" promptText="E.g. 10">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <TextField fx:id="wed" alignment="CENTER" disable="true" layoutX="192.0" layoutY="768.0" prefHeight="30.0" prefWidth="64.0" promptText="E.g. 10">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <TextField fx:id="thu" alignment="CENTER" disable="true" layoutX="267.0" layoutY="768.0" prefHeight="30.0" prefWidth="64.0" promptText="E.g. 10">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <TextField fx:id="fri" alignment="CENTER" disable="true" layoutX="342.0" layoutY="770.0" prefHeight="30.0" prefWidth="64.0" promptText="E.g. 10">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <TextField fx:id="sat" alignment="CENTER" disable="true" layoutX="412.0" layoutY="768.0" prefHeight="30.0" prefWidth="64.0" promptText="E.g. 10">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <TextField fx:id="sun" alignment="CENTER" disable="true" layoutX="484.0" layoutY="768.0" prefHeight="30.0" prefWidth="64.0" promptText="E.g. 10">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+   </children>
+</AnchorPane>

@@ -1,0 +1,316 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="828.0" prefWidth="1457.0" styleClass="root" stylesheets="@Style.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AutoShiftScheduler.HomescreenFXMLController">
+   <children>
+      <ScrollPane fx:id="scrollPane" layoutX="169.0" layoutY="99.0" pannable="true" prefHeight="583.0" prefWidth="1119.0" styleClass="scrollPane" stylesheets="@Style.css">
+         <content>
+            <GridPane fx:id="calendarGridPane" alignment="CENTER" prefWidth="1103.0" styleClass="gridPane" stylesheets="@Style.css">
+              <columnConstraints>
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" maxWidth="130.0" minWidth="130.0" prefWidth="130.0" />
+                <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+                  <ColumnConstraints halignment="CENTER" hgrow="ALWAYS" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints fx:id="dateRow0" maxHeight="70.0" minHeight="70.0" prefHeight="70.0" valignment="CENTER" vgrow="ALWAYS" />
+              </rowConstraints>
+               <children>
+                  <Label alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="27.0" prefWidth="63.0" text="Mon" textAlignment="CENTER" textFill="#7c7c7c" GridPane.columnIndex="1" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </Label>
+                  <Label alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="27.0" prefWidth="62.0" text="Tue" textAlignment="CENTER" textFill="#7c7c7c" GridPane.columnIndex="2" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="27.0" prefWidth="59.0" text="Wed" textAlignment="CENTER" textFill="#7c7c7c" GridPane.columnIndex="3" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="27.0" prefWidth="44.0" text="Thu" textAlignment="CENTER" textFill="#7c7c7c" GridPane.columnIndex="4" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="27.0" prefWidth="41.0" text="Fri" textAlignment="CENTER" textFill="#7c7c7c" GridPane.columnIndex="5" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="27.0" prefWidth="43.0" text="Sat" textAlignment="CENTER" textFill="#7c7c7c" GridPane.columnIndex="6" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="TOP_CENTER" contentDisplay="TOP" prefHeight="27.0" prefWidth="49.0" text="Sun" textAlignment="CENTER" textFill="#7c7c7c" GridPane.columnIndex="7" GridPane.valignment="TOP">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="monthYearLabel" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" prefHeight="43.0" prefWidth="91.0" textAlignment="CENTER" textFill="#7c7c7c" GridPane.valignment="CENTER">
+                     <font>
+                        <Font size="36.0" />
+                     </font></Label>
+                  <Label fx:id="mondayDateLabel" alignment="BOTTOM_CENTER" contentDisplay="BOTTOM" lineSpacing="1.0" prefHeight="38.0" prefWidth="99.0" textAlignment="CENTER" textFill="#7c7c7c" GridPane.columnIndex="1" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets top="10.0" />
+                     </opaqueInsets></Label>
+                  <Label fx:id="tuesdayDateLabel" alignment="CENTER" contentDisplay="CENTER" lineSpacing="1.0" prefHeight="43.0" prefWidth="103.0" textAlignment="CENTER" textFill="#7c7c7c" GridPane.columnIndex="2" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Label fx:id="wednesdayDateLabel" alignment="CENTER" contentDisplay="CENTER" lineSpacing="1.0" prefHeight="45.0" prefWidth="119.0" textAlignment="CENTER" textFill="#7c7c7c" GridPane.columnIndex="3" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Label fx:id="thursdayDateLabel" alignment="CENTER" contentDisplay="CENTER" lineSpacing="1.0" prefHeight="43.0" prefWidth="116.0" textAlignment="CENTER" textFill="#7c7c7c" GridPane.columnIndex="4" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Label fx:id="fridayDateLabel" alignment="CENTER" contentDisplay="CENTER" lineSpacing="1.0" prefHeight="41.0" prefWidth="109.0" textAlignment="CENTER" textFill="#7c7c7c" GridPane.columnIndex="5" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Label fx:id="saturdayDateLabel" alignment="CENTER" contentDisplay="CENTER" lineSpacing="1.0" prefHeight="42.0" prefWidth="119.0" textAlignment="CENTER" textFill="#7c7c7c" GridPane.columnIndex="6" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+                  <Label fx:id="sundayDateLabel" alignment="CENTER" contentDisplay="CENTER" lineSpacing="1.0" prefHeight="42.0" prefWidth="113.0" textFill="#7c7c7c" GridPane.columnIndex="7" GridPane.valignment="BOTTOM">
+                     <font>
+                        <Font size="24.0" />
+                     </font></Label>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </GridPane>
+         </content>
+      </ScrollPane>
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="593.0" layoutY="14.0" prefHeight="55.0" prefWidth="262.0" text="AutoShift" textAlignment="CENTER" textFill="#ecffec">
+         <font>
+            <Font name="Arial Italic" size="48.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <Button fx:id="lastWeekButton" alignment="CENTER" contentDisplay="CENTER" layoutX="36.0" layoutY="99.0" mnemonicParsing="false" onAction="#lastWeek" prefHeight="49.0" prefWidth="116.0" text="Previous" textAlignment="CENTER" textFill="#5d5d5d">
+         <font>
+            <Font name="Arial Bold Italic" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <Button fx:id="nextWeekButton" alignment="CENTER" contentDisplay="CENTER" layoutX="1307.0" layoutY="99.0" mnemonicParsing="false" onAction="#nextWeek" prefHeight="49.0" prefWidth="116.0" text="Next" textAlignment="CENTER" textFill="#5d5d5d">
+         <font>
+            <Font name="Arial Bold Italic" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <Button fx:id="autoShiftsButton" alignment="CENTER" contentDisplay="CENTER" layoutX="48.0" layoutY="616.0" mnemonicParsing="false" onAction="#autoShifts" prefHeight="66.0" prefWidth="93.0" text="Auto &gt;&gt;" textAlignment="CENTER" textFill="#5d5d5d" wrapText="true">
+         <font>
+            <Font name="Arial Bold Italic" size="18.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <TextField fx:id="weeklyBudgetTextField" alignment="CENTER" disable="true" editable="false" layoutX="1347.0" layoutY="789.0" prefHeight="25.0" prefWidth="85.0">
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <Label alignment="CENTER_RIGHT" layoutX="1285.0" layoutY="791.0" prefHeight="20.0" prefWidth="55.0" text="Budget " textFill="#ecffec">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Label>
+      <TextField fx:id="labourCostTextField" alignment="CENTER" disable="true" layoutX="1347.0" layoutY="731.0" prefHeight="25.0" prefWidth="85.0">
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <Label alignment="CENTER_RIGHT" layoutX="1260.0" layoutY="732.0" prefHeight="20.0" prefWidth="85.0" text="Total Costs " textAlignment="CENTER" textFill="#ecffec" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Label>
+      <Button fx:id="editBudgetButton" layoutX="1223.0" layoutY="789.0" mnemonicParsing="false" onAction="#editBudget" prefHeight="26.0" prefWidth="55.0" text="Edit" textFill="#5d5d5d">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Button>
+      <Button fx:id="exitButton" layoutX="48.0" layoutY="772.0" mnemonicParsing="false" onAction="#exitApplication" prefHeight="33.0" prefWidth="93.0" text="Exit" textFill="#d7300f">
+         <font>
+            <Font name="Arial Bold Italic" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <Button fx:id="addEmployeeButton" alignment="CENTER" contentDisplay="CENTER" layoutX="48.0" layoutY="340.0" mnemonicParsing="false" onAction="#addEmployee" prefHeight="66.0" prefWidth="93.0" text="Add Employee" textAlignment="CENTER" textFill="#5d5d5d" wrapText="true">
+         <font>
+            <Font name="System Bold Italic" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Button>
+      <TextField fx:id="prefDaysOff" alignment="CENTER" disable="true" editable="false" layoutX="1340.0" layoutY="486.0" prefHeight="30.0" prefWidth="55.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <Label alignment="CENTER_RIGHT" layoutX="1321.0" layoutY="436.0" prefHeight="43.0" prefWidth="93.0" text="Preferred days off met" textAlignment="CENTER" textFill="#ecffec" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Label>
+      <TextField fx:id="consDays" alignment="CENTER" disable="true" layoutX="1340.0" layoutY="385.0" prefHeight="30.0" prefWidth="55.0">
+         <font>
+            <Font size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></TextField>
+      <Label alignment="CENTER_RIGHT" layoutX="1321.0" layoutY="312.0" prefHeight="66.0" prefWidth="93.0" text="Consecutive working days met" textAlignment="CENTER" textFill="#ecffec" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect></Label>
+      <TextField fx:id="monTotal" alignment="CENTER" disable="true" layoutX="334.0" layoutY="694.0" prefHeight="25.0" prefWidth="66.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <Label alignment="CENTER_RIGHT" layoutX="176.0" layoutY="697.0" prefHeight="20.0" prefWidth="144.0" text="Daily Shifts allocated" textFill="#ecffec" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <TextField fx:id="tueTotal" alignment="CENTER" disable="true" layoutX="476.0" layoutY="694.0" prefHeight="25.0" prefWidth="66.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="wedTotal" alignment="CENTER" disable="true" layoutX="612.0" layoutY="694.0" prefHeight="25.0" prefWidth="66.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="thuTotal" alignment="CENTER" disable="true" layoutX="754.0" layoutY="695.0" prefHeight="25.0" prefWidth="66.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="friTotal" alignment="CENTER" disable="true" layoutX="894.0" layoutY="694.0" prefHeight="25.0" prefWidth="66.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="satTotal" alignment="CENTER" disable="true" layoutX="1033.0" layoutY="694.0" prefHeight="25.0" prefWidth="66.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="sunTotal" alignment="CENTER" disable="true" layoutX="1178.0" layoutY="694.0" prefHeight="25.0" prefWidth="66.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <Label alignment="CENTER_RIGHT" layoutX="1275.0" layoutY="697.0" prefHeight="20.0" prefWidth="85.0" text="Total Shifts " textAlignment="CENTER" textFill="#ecffec" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+      <TextField fx:id="shiftTotal" alignment="CENTER" disable="true" layoutX="1365.0" layoutY="695.0" prefHeight="25.0" prefWidth="66.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="monCost" alignment="CENTER" disable="true" layoutX="334.0" layoutY="730.0" nodeOrientation="LEFT_TO_RIGHT" prefHeight="25.0" prefWidth="66.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="tueCost" alignment="CENTER" disable="true" layoutX="476.0" layoutY="731.0" prefHeight="25.0" prefWidth="66.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="wedCost" alignment="CENTER" disable="true" layoutX="612.0" layoutY="731.0" prefHeight="25.0" prefWidth="66.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="thuCost" alignment="CENTER" disable="true" layoutX="754.0" layoutY="731.0" prefHeight="25.0" prefWidth="66.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="friCost" alignment="CENTER" disable="true" layoutX="894.0" layoutY="731.0" prefHeight="25.0" prefWidth="66.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="satCost" alignment="CENTER" disable="true" layoutX="1033.0" layoutY="731.0" prefHeight="25.0" prefWidth="66.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="sunCost" alignment="CENTER" disable="true" layoutX="1178.0" layoutY="730.0" prefHeight="25.0" prefWidth="66.0">
+         <effect>
+            <DropShadow />
+         </effect>
+      </TextField>
+      <Label alignment="CENTER_RIGHT" layoutX="211.0" layoutY="732.0" prefHeight="11.0" prefWidth="109.0" text="Daily costs" textFill="#ecffec" wrapText="true">
+         <font>
+            <Font name="System Bold" size="14.0" />
+         </font>
+         <effect>
+            <DropShadow />
+         </effect>
+      </Label>
+   </children>
+</AnchorPane>
